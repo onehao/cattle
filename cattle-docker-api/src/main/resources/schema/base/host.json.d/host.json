@@ -1,0 +1,11 @@
+{
+    "resourceActions": {
+        "dockersocket": {
+            "input": null,
+            "output": "hostAccess",
+            "attributes" : {
+                "states" : ["active", "inactive", "activating", "deactivating"]
+            }
+        }
+    }
+}

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="cattle-app">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="cattle-app-config-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-app-config/cattle-app-config">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-vm-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-vm/cattle-vm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-logic-common-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-logic-common/cattle-iaas-logic-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-resource-monitor-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-resource-monitor/cattle-framework-resource-monitor">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-object-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-object/cattle-framework-object">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-agent-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-agent/cattle-iaas-agent">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-docker-common-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-docker-common/cattle-docker-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-api/cattle-framework-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-events-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-events/cattle-framework-events">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-host-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-host-api/cattle-host-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-ssh-common-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-ssh-common/cattle-ssh-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-token-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-token/cattle-framework-token">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-metadata-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-metadata/cattle-iaas-metadata">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-jooq-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-jooq/cattle-framework-jooq">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-service-discovery-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-service-discovery-api/cattle-iaas-service-discovery-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-system-stack-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-system-stack/cattle-system-stack">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-config-item-common-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-config-item-common/cattle-config-item-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-events-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-events/cattle-iaas-events">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-host-stats-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-host-stats/cattle-host-stats">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-api-logic-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-api-logic/cattle-iaas-api-logic">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-encryption-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-encryption/cattle-framework-encryption">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-jmx-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-jmx/cattle-framework-jmx">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-archaius-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-archaius/cattle-framework-archaius">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-eventing-redis-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-eventing-redis/cattle-eventing-redis">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-eventing-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-eventing/cattle-framework-eventing">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-json-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-json/cattle-framework-json">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-utils-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-utils/cattle-framework-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-async-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-async/cattle-framework-async">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-lock-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-lock/cattle-framework-lock">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-managed-context-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-managed-context/cattle-framework-managed-context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-docker-storage-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-docker-storage/cattle-docker-storage">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-storage-service-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-storage-service/cattle-iaas-storage-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-allocator-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-allocator/cattle-iaas-allocator">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-simple-allocator-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-simple-allocator/cattle-iaas-simple-allocator">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-model-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-model/cattle-iaas-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-simulator-agent-connection-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-simulator-agent-connection/cattle-simulator-agent-connection">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-agent-server-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-agent-server/cattle-iaas-agent-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-logic-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-logic/cattle-iaas-logic">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-resource-pool-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-resource-pool/cattle-iaas-resource-pool">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-engine-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-engine/cattle-framework-engine">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-extension-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-extension/cattle-framework-extension">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-engine-jooq-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-engine-jooq/cattle-iaas-engine-jooq">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-simulator-storage-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-simulator-storage/cattle-simulator-storage">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-db-loader-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-db-loader/cattle-framework-db-loader">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-pool-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-pool/cattle-framework-pool">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-meta-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-meta/cattle-meta">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-register-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-register/cattle-register">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-agent-instance-impl-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-agent-instance-impl/cattle-agent-instance-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-auth-logic-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-auth-logic/cattle-iaas-auth-logic">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-ha-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-ha/cattle-iaas-ha">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-sample-setup-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-sample-setup/cattle-sample-setup">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-agent-connection-delegate-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-agent-connection-delegate/cattle-agent-connection-delegate">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-agent-instance-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-agent-instance/cattle-iaas-agent-instance">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-host-only-network-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-host-only-network/cattle-host-only-network">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-docker-compute-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-docker-compute/cattle-docker-compute">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-external-handler-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-external-handler/cattle-iaas-external-handler">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-zookeeper-lock-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-zookeeper-lock/cattle-zookeeper-lock">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-system-task-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-system-task/cattle-framework-system-task">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-docker-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-docker-api/cattle-docker-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-docker-machine-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-docker-machine/cattle-docker-machine">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-api-pub-sub-jetty-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-api-pub-sub-jetty/cattle-framework-api-pub-sub-jetty">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-task-jooq-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-task-jooq/cattle-iaas-task-jooq">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-agent-resources-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-agent-resources/cattle-agent-resources">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-metrics-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-metrics/cattle-framework-metrics">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-config-item-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-config-item-api/cattle-config-item-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-config-item-server-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-config-item-server/cattle-config-item-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-accounts-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-accounts/cattle-iaas-accounts">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-settings-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-settings-api/cattle-settings-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-archaius-management-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-archaius-management/cattle-iaas-archaius-management">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-extension-spring-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-extension-spring/cattle-framework-extension-spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-spring-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-spring/cattle-framework-spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-extension-api-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-extension-api/cattle-extension-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-system-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-system/cattle-iaas-system">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-spring-module-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-spring-module/cattle-framework-spring-module">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-deferred-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-deferred/cattle-framework-deferred">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-api-pub-sub-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-api-pub-sub/cattle-framework-api-pub-sub">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-agent-connection-event-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-agent-connection-event/cattle-agent-connection-event">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-bootstrap-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-bootstrap/cattle-iaas-bootstrap">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-schema-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-schema/cattle-framework-schema">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-resources-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-resources/cattle-resources">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-service-discovery-server-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-service-discovery-server/cattle-iaas-service-discovery-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-labels-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-labels/cattle-iaas-labels">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-iaas-healthcheck-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-iaas-healthcheck/cattle-iaas-healthcheck">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-java-server-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-java-server/cattle-framework-java-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-auditing-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-auditing/cattle-framework-auditing">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-dev-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-dev/cattle-dev">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-logback-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-logback/cattle-framework-logback">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cattle-framework-server-0.5.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cattle-framework-server/cattle-framework-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="cattle-app"/>
+        <property name="java-output-path" value="/cattle-app/target/classes"/>
+    </wb-module>
+</project-modules>

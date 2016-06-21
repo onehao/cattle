@@ -1,0 +1,54 @@
+{
+    "resourceFields": {
+        "networkMode": {
+            "type": "enum",
+            "options": [
+                "none",
+                "bridge",
+                "host",
+                "managed",
+                "container"
+            ],
+            "default": "managed",
+            "nullable": true
+        },
+        "networkContainerId": {
+            "type": "reference[container]",
+            "nullable": true
+        },
+        "dockerPorts": {
+            "type": "map[string]"
+        },
+        "dockerHostIp": {
+            "type": "string"
+        },
+        "dockerIp": {
+            "type": "string"
+        },
+        "dataVolumes": {
+            "type": "array[string]",
+            "nullable": true,
+            "create": true
+        },
+        "dataVolumesFrom": {
+            "type" : "array[reference[container]]",
+            "nullable" : true
+        }
+    },
+    "resourceActions": {
+        "execute": {
+            "input": "containerExec",
+            "output": "hostAccess",
+            "attributes" : {
+                "state" : "running"
+            }
+        },
+        "proxy": {
+            "input": "containerProxy",
+            "output": "hostAccess",
+            "attributes" : {
+                "state" : "running"
+            }
+        }
+    }
+}

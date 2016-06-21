@@ -1,0 +1,29 @@
+{
+    "resourceFields": {
+        "info": {
+            "type" : "json"
+        },
+        "agentState": {
+            "type" : "string"
+        },
+        "hostname": {
+            "type" : "string"
+        },
+        "apiProxy": {
+            "type" : "string",
+            "nullable" : true
+        },
+        "labels": {
+            "type": "map[string]",
+            "create": true,
+            "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "publicEndpoints":{
+            "type": "array[publicEndpoint]",
+            "required": false,
+            "nullable": true
+        }
+    }
+}

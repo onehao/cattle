@@ -473,6 +473,7 @@
     </bean>
 
     <bean class="io.cattle.platform.iaas.api.auth.integration.github.GithubTokenCreator" />
+    <bean class="io.cattle.platform.iaas.api.auth.integration.facebook.FacebookTokenCreator" />
 
         <bean class="io.cattle.platform.iaas.api.auth.dao.impl.AuthDaoImpl" />
     <bean class="io.cattle.platform.iaas.api.auth.dao.impl.PasswordDaoImpl" />
@@ -494,10 +495,15 @@
     <bean class="io.cattle.platform.iaas.api.auth.integration.github.GithubTokenUtil"/>
     <bean class="io.cattle.platform.iaas.api.auth.integration.github.resource.GithubClient"/>
     <bean class="io.cattle.platform.iaas.api.auth.integration.github.GithubConfigManager" />
+    <bean class="io.cattle.platform.iaas.api.auth.integration.facebook.FacebookTokenUtil"/>
+    <bean class="io.cattle.platform.iaas.api.auth.integration.facebook.resource.FacebookClient"/>
+    <bean class="io.cattle.platform.iaas.api.auth.integration.facebook.FacebookConfigManager" />
+    
 
 	
     <bean id="TokenAccountLookup" class="io.cattle.platform.iaas.api.auth.integration.internal.rancher.TokenAccountLookup" />
     <bean class="io.cattle.platform.iaas.api.auth.integration.github.GithubIdentityProvider"/>
+    <bean class="io.cattle.platform.iaas.api.auth.integration.facebook.FacebookIdentityProvider"/>
 
     <bean class="io.cattle.platform.iaas.api.request.handler.GenericWhitelistedProxy" />
 

@@ -239,6 +239,10 @@
          "startCount" : {
             "type" : "int",
             "nullable" : true
+        },
+        "onehao_property": {
+            "type": "string",
+            "nullable": true
         }
     },
     "resourceActions": {

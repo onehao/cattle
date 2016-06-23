@@ -113,6 +113,15 @@
         "githubconfig.enabled": "cr",
         "githubconfig.hostname": "cr",
         "githubconfig.scheme": "cr",
+        
+        "facebookconfig": "cru",
+        "facebookconfig.allowedIdentities": "cr",
+        "facebookconfig.accessMode": "cr",
+        "facebookconfig.clientId": "cr",
+        "facebookconfig.clientSecret": "cro",
+        "facebookconfig.enabled": "cr",
+        "facebookconfig.hostname": "cr",
+        "facebookconfig.scheme": "cr",
 
         "azureadconfig": "cru",
         "azureadconfig.accessMode": "cr",
@@ -254,9 +263,9 @@
         "taskInstance.serverId" : "r",
         "taskInstance.startTime" : "r",
         "taskInstance.taskId" : "r",
-
+		
         "task" : "r",
-
+		"container.onehao_property" : "cru", 
         "end" : ""
     }
 }

@@ -23,5 +23,9 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/cattle-iaas-logic-common"/>
+	<classpathentry kind="src" path="/cattle-framework-engine"/>
+	<classpathentry kind="src" path="/cattle-framework-archaius"/>
+	<classpathentry kind="src" path="/cattle-iaas-model"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

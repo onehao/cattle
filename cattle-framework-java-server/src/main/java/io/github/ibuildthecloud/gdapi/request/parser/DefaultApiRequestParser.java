@@ -97,7 +97,7 @@ public class DefaultApiRequestParser implements ApiRequestParser {
         try {
             Map<String, Object> multiPart = parseMultipart(request);
 
-            return multiPart == null ? request.getParameterMap() : multiPart;
+            return (Map<String, Object>) (multiPart == null ? request.getParameterMap() : multiPart);
         } catch (IOException e) {
             if (e.getCause() instanceof FileUploadBase.SizeLimitExceededException)
                 throw new ClientVisibleException(ResponseCodes.REQUEST_ENTITY_TOO_LARGE);

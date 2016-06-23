@@ -9,11 +9,6 @@
     </parent>
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>io.cattle</groupId>
             <artifactId>cattle-framework-api</artifactId>
             <version>${project.version}</version>

@@ -35,7 +35,7 @@ public class JettyWebSocketSubcriptionHandler extends NonBlockingSubscriptionHan
 
     @Override
     protected MessageWriter getMessageWriter(ApiRequest apiRequest) throws IOException {
-        HttpServletRequest req = apiRequest.getServletContext().getRequest();
+        HttpServletRequest req = apiRequest.getServletContext().getRequest();//.getRequest();
         HttpServletResponse resp = apiRequest.getServletContext().getResponse();
         final WebSocketMessageWriter messageWriter = new WebSocketMessageWriter();
         WebSocketServerFactory factory = new WebSocketServerFactory();

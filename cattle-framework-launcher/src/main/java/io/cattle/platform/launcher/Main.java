@@ -2,7 +2,6 @@ package io.cattle.platform.launcher;
 
 import io.cattle.platform.launcher.url.JarInJarHandler;
 import io.cattle.platform.launcher.url.JarInJarHandlerFactory;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -222,7 +221,7 @@ public class Main {
 
         return result;
     }
-
+    
     protected void traverse(String path, List<URL> result) {
         File file = new File(path);
 

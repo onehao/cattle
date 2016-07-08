@@ -3,7 +3,7 @@
     <!-- Configure the database connection here -->
     <jdbc>
         <driver>org.drizzle.jdbc.DrizzleDriver</driver>
-        <url>jdbc:mysql:thin://localhost:3306/cattle</url>
+        <url>jdbc:mysql:thin://minint-89FVFD3.hz.ali.com:3306/cattle</url>
         <user>cattle</user>
         <password>cattle</password>
     </jdbc>

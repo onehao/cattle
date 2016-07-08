@@ -30,11 +30,11 @@ DRIVER_JAR=$(prep_driver_jar)
 $LIQUIBASE_HOME/liquibase --classpath="$DRIVER_JAR"  \
     --driver=com.mysql.jdbc.Driver \
     --changeLogFile=dump.xml \
-    --url="jdbc:mysql://localhost:3306/${DB}_base" \
+    --url="jdbc:mysql://minint-89FVFD3.hz.ali.com:3306/${DB}_base" \
     --username=$DB \
     --password=$DB \
      diffChangeLog \
-    --referenceUrl="jdbc:mysql://localhost:3306/$DB" \
+    --referenceUrl="jdbc:mysql://minint-89FVFD3.hz.ali.com:3306/$DB" \
     --referenceUsername=$DB \
     --referencePassword=$DB
 

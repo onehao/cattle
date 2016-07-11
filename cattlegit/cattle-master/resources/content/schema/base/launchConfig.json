@@ -1,0 +1,35 @@
+{
+    "collectionMethods" : [ "POST" ],
+    "resourceFields": {
+        "dataVolumesFromLaunchConfigs": {
+            "type" : "array[string]",
+            "nullable" : true
+        },
+        "networkLaunchConfig": {
+            "type" : "string",
+            "nullable" : true
+        },
+        "vcpu" : {
+            "type" : "int",
+            "nullable" : true,
+            "create" : true,
+            "default": 1
+        },
+        "userdata" : {
+            "type" : "string",
+            "nullable" : true,
+            "create" : true
+        },
+        "disks" : {
+            "type" : "array[virtualMachineDisk]",
+            "create" : true,
+            "nullable": true
+        },
+        "kind" : {
+            "type" : "enum",
+            "options" : ["container", "virtualMachine"],
+            "create" : true,
+            "default": "container"
+        }
+    }
+}

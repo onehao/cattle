@@ -1,0 +1,16 @@
+{
+    "collectionMethods" : [ "GET", "POST" ],
+    "resourceFields": {
+        "agentId": {
+            "create": true,
+            "type": "reference[agent]"
+        }
+    },
+    "collectionFilters": {
+        "eventNames": {
+            "modifiers": [
+                "eq"
+            ]
+        }
+    }
+}

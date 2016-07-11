@@ -1,0 +1,104 @@
+{
+  "resourceActions" : {
+    "setmembers": {
+      "input": "setProjectMembersInput",
+      "output": "setProjectMembersInput",
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "deactivate" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "activate" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "update" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "delete" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "restore" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "purge" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    },
+    "remove" : {
+      "attributes" : {
+        "capability" : "owner"
+      }
+    }
+  },
+  "resourceFields": {
+    "allowSystemRole":{
+        "type": "boolean",
+        "default": false,
+        "required": false
+    },
+    "members": {
+      "type": "array[projectMember]",
+      "nullable": "true"
+    },
+    "swarm": {
+      "type": "boolean",
+      "nullable": false,
+      "default": false,
+      "attributes" : {
+        "scheduleUpdate" : true
+      }
+    },
+    "kubernetes": {
+      "type": "boolean",
+      "nullable": false,
+      "default": false,
+      "attributes" : {
+        "scheduleUpdate" : true
+      }
+    },
+    "mesos": {
+      "type": "boolean",
+      "nullable": false,
+      "default": false,
+      "attributes" : {
+        "scheduleUpdate" : true
+      }
+	},
+    "virtualMachine": {
+      "type": "boolean",
+      "nullable": false,
+      "default": false,
+      "attributes" : {
+        "scheduleUpdate" : true
+      }
+	},
+    "publicDns": {
+      "type": "boolean",
+      "nullable": false,
+      "default": false,
+      "attributes" : {
+        "scheduleUpdate" : true
+      }
+    },
+    "servicesPortRange": {
+        "type" : "servicesPortRange",
+        "nullable" : true,
+        "attributes" : {
+        "scheduleUpdate" : true
+      }
+    }
+  }
+}

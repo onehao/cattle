@@ -1,0 +1,7 @@
+{   
+    "authorize" : {
+        "service.resourceActions.certificate": "c",
+        "registryCredential.secretValue": "cur",
+        "end" : ""
+    }
+}

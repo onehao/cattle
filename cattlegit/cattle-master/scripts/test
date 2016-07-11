@@ -1,0 +1,50 @@
+#!/bin/bash
+set -e
+
+cd $(dirname $0)/..
+
+SCRATCH_TEMP=
+
+trap destroy_root exit
+
+setup_root()
+{
+    if [ -d /scratch ]; then
+        SCRATCH_TEMP=$(mktemp -d /scratch/cattle.XXXXX)
+        rsync --exclude '*.pyc' -a tests $SCRATCH_TEMP
+        pushd $SCRATCH_TEMP
+    fi
+}
+
+destroy_root()
+{
+    if [[ -n "$SCRATCH_TEMP" && -d "$SCRATCH_TEMP" ]]; then
+        popd
+        rsync --delete -a ${SCRATCH_TEMP}/tests/integration/.tox ./tests/integration
+        rm -rf "$SCRATCH_TEMP"
+    fi
+}
+
+check_schemas()
+{
+    for i in resources/content/db/core*xml; do
+        if ! grep -q http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd $i; then
+            echo 'ERROR: Please use 3.1 xsd for changelog schema on file:' $i
+            echo 'ERROR:    Currently using' $(head -n2 $i | grep databaseChangeLog)
+            exit 1
+        fi
+    done
+}
+
+check_schemas
+
+setup_root
+
+cd tests/integration
+export CATTLE_URL=${CATTLE_TEST_URL:-http://localhost:8081/v1/schemas}
+
+if [ -e .tox ] && [ ! -e .tox/py27/include/python2.7 ]; then
+    rm -rf .tox
+fi
+
+tox "$@"

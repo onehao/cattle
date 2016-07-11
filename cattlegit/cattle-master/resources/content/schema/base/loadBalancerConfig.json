@@ -1,0 +1,18 @@
+{
+    "resourceFields": {
+        "lbCookieStickinessPolicy":{
+            "type": "loadBalancerCookieStickinessPolicy",
+            "nullable": true,
+            "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "haproxyConfig":{
+            "type": "haproxyConfig",
+            "nullable": true,
+            "attributes" : {
+                "scheduleUpdate" : true
+            }
+        }
+    }
+}

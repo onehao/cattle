@@ -1,0 +1,24 @@
+{
+    "collectionMethods" : [ "GET", "POST" ],
+    "resourceFields": {
+        "managedConfig": {
+            "default" : true
+        },
+        "accountId": {
+            "defaultIsNull" : true
+        },
+        "user": {
+            "type": "string",
+            "nullable": true,
+            "create": true
+        },
+        "uri": {
+            "type": "string",
+            "unique": true
+        }
+    },
+    "resourceActions" : {
+        "activate" : {
+        }
+    }
+}

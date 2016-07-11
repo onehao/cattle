@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+
+cd $(dirname $0)/..
+
+# This will start MySQL if needed.
+if [ "${BOOTSTRAP_ON_RUN}" = "true" ]; then
+    ./scripts/bootstrap
+    trap "service mysql stop" EXIT SIGTERM
+fi
+
+
+RUNTIME_DIR=${RUNTIME_DIR:-../../../runtime/cli/}
+
+cd code/packaging/app
+
+if [ "${RUNTIME_DIR_CLEAN}" = "true" ]; then
+    rm -rf $RUNTIME_DIR
+fi
+
+mkdir -p $RUNTIME_DIR
+
+MEM="-Xmx1024m"
+if [ $(grep MemTotal: /proc/meminfo | awk '{print $2}') -gt 6000000 ]; then
+    MEM="-Xmx4096m"
+fi
+
+CMD="java
+    -Dcattle.http.port=${CATTLE_TEST_HTTP_PORT:-8081}
+    -Dcattle.http.proxied.port=${CATTLE_TEST_HTTP_PROXIED_PORT:-8082}
+    -Dlogback.log.dir=$RUNTIME_DIR/logs/
+    -Ddb.cattle.home=${RUNTIME_DIR}/db/
+    -Dhost.api.proxy.mode=${CATTLE_HOST_API_PROXY_MODE:-embedded}
+    $MEM -jar target/*.war"
+
+if [ "$1" = "--background" ]; then
+    rm -rf ${RUNTIME_DIR}/{run-success,run-error}
+    $CMD --notify ../../../tools/development/run-success.sh --notify-error ../../../tools/development/run-error.sh &
+    while sleep .5; do
+        if [ -f ${RUNTIME_DIR}/run-success ]; then
+            break
+        elif [ -f ${RUNTIME_DIR}/run-error ]; then
+            exit 1
+        fi
+    done
+else
+    $CMD
+fi

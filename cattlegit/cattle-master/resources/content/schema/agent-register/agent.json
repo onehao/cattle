@@ -1,0 +1,11 @@
+{
+    "collectionMethods": [ "GET", "POST" ],
+    "resourceFields": {
+        "uri": {
+            "create": true
+        },
+        "user": {
+            "create": true
+        }
+    }
+}

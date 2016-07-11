@@ -1,0 +1,97 @@
+#!/bin/bash
+set -e
+
+echo $(hostname)
+
+cd $(dirname $0)
+
+export RUNTIME_DIR=../../../runtime/ci/
+export RUNTIME_DIR_CLEAN=true
+export CATTLE_LOGBACK_ROOT_LEVEL=error
+export CATTLE_DB_CATTLE_DATABASE=mysql
+
+: ${CATTLE_DB_CATTLE_MYSQL_PORT:=13306}
+export CATTLE_DB_CATTLE_MYSQL_PORT
+
+# Uncomment this if you're impatient
+#export CATTLE_IDEMPOTENT_CHECKS=false
+
+
+if [ -x "$(which wrapdocker)" ]; then
+    echo Launching Docker
+    wrapdocker >/tmp/docker.log 2>&1
+    docker info
+fi
+
+echo_dot()
+{
+    trap "exit 0" TERM
+    echo -n " "
+    while true; do
+        echo -n .
+        sleep 1
+    done
+}
+
+run()
+{
+    echo -n Running "$@"
+    echo_dot 2>/dev/null &
+    DOT_PID=$!
+
+    "$@" > /tmp/${1}.log || {
+        echo "$@" failed
+        cat /tmp/${1}.log
+        echo "$@" failed
+        exit 1
+    }
+
+    kill $DOT_PID
+    echo
+}
+
+# Background to start the Docker pulls
+./test-warm >/dev/null &
+
+run ./bootstrap
+run ./clean
+
+CI=true MAVEN_ARGS='-B -q' run ./build
+
+run ./run --background
+
+# Wait for completion now to ensure that images are pulled
+./test-warm
+
+export AGENT_IMAGE=$(grep bootstrap.required.image ../resources/content/cattle-global.properties | cut -f2 -d=)
+DEV_HOST=localhost:8081 ../tools/development/register-boot2docker.sh >/tmp/register.log &
+
+./wait-for-hosts
+
+./test -e py27 -- -m nonparallel
+
+./test -- -m "'not nonparallel'" -n $(($(nproc) + 1)) -v || {
+    echo Test failed
+    cat /tmp/run.log
+    echo Test failed
+    exit 1
+}
+
+# Now test H2
+
+echo "Testing H2"
+
+export RUNTIME_DIR=../../../runtime/ci-h2/
+export RUNTIME_DIR_CLEAN=true
+export CATTLE_DB_CATTLE_DATABASE=h2
+export CATTLE_TEST_HTTP_PORT=8083
+export CATTLE_TEST_HTTP_PROXIED_PORT=8084
+export CATTLE_TEST_URL=http://localhost:8083/v1/schemas
+
+run ./run --background
+./test -e py27 -- core/test_virtual_machine.py core/test_container.py || {
+    echo Test failed
+    cat /tmp/run.log
+    echo Test failed
+    exit 1
+}

@@ -1,0 +1,13 @@
+{
+    "resourceMethods" : [
+      "GET", "PUT"
+    ],
+    "resourceFields": {
+        "agentId": {
+            "update": true
+        },
+        "version": {
+            "update": true
+        }
+    }
+}

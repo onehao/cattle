@@ -1,0 +1,18 @@
+{
+  "resourceFields": {
+    "accessMode": {
+      "type" : "enum",
+      "required": true,
+      "default" : "unrestricted",
+      "options" : [
+        "restricted",
+        "unrestricted",
+        "required"
+      ]
+    },
+    "allowedIdentities": {
+      "type" : "array[identity]",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "resourceFields" : {
+        "blockDevicePath" : {
+            "type": "string",
+            "nullable": true
+        },
+        "volumeCapabilities" : {
+            "type" : "array[string]",
+            "nullable" : true
+        }
+    }
+}

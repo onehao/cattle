@@ -1,0 +1,116 @@
+{
+    "resourceFields": {
+        "environmentId":{
+            "type": "reference[environment]",
+            "required": true,
+            "nullable": false
+        },
+        "scale": {
+            "type": "int",
+            "required": false,
+            "nullable": false,
+            "default": 1,
+             "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "name":{
+            "required": true,
+            "validChars": "a-zA-Z0-9-",
+            "minLength": 1,
+            "maxLength": 63,
+             "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "launchConfig": {
+            "type": "launchConfig",
+            "create": true,
+            "required": false,
+            "nullable": true
+        },
+        "upgrade": {
+            "type": "serviceUpgrade",
+            "create": false,
+            "required": false,
+            "nullable": true
+        },
+        "restart": {
+            "type": "serviceRestart",
+            "create": false
+        },
+        "secondaryLaunchConfigs": {
+            "type": "array[secondaryLaunchConfig]",
+            "create": true,
+            "required": false
+        },
+        "metadata": {
+            "type": "map[json]",
+            "create": true,
+            "required": false,
+            "nullable": true,
+             "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "fqdn":{
+            "type": "string",
+            "required": false,
+            "nullable": true
+        },
+        "publicEndpoints":{
+            "type": "array[publicEndpoint]",
+            "required": false,
+            "nullable": true
+        },
+        "retainIp": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "assignServiceIpAddress": {
+          "type": "boolean",
+          "nullable": false,
+          "default": false
+        },
+        "selectorLink":{
+             "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "selectorContainer":{
+             "attributes" : {
+                "scheduleUpdate" : true
+            }
+        },
+        "startOnCreate": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+        }
+    },
+    "resourceActions" : {
+        "certificate" : {
+        },
+        "addservicelink" : {
+            "input" : "addRemoveServiceLinkInput",
+            "output" : "service"
+
+        },
+        "removeservicelink" : {
+            "input" : "addRemoveServiceLinkInput",
+            "output" : "service"
+        },
+        "setservicelinks" : {
+            "input" : "setServiceLinksInput",
+            "output" : "service"
+        },
+        "upgrade" : {
+            "input" : "serviceUpgrade",
+            "output" : "service"
+        },
+        "restart" : {
+            "input" : "serviceRestart",
+            "output" : "service"
+        }
+    }
+}

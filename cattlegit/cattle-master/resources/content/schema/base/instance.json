@@ -1,0 +1,111 @@
+{
+    "resourceFields" : {
+        "requestedHostId" : {
+            "type" : "reference[host]",
+            "create" : true,
+            "update" : true,
+            "nullable" : true
+        },
+        "imageUuid" : {
+            "type" : "string",
+            "nullable" : true,
+            "create" : true
+        },
+        "networkIds" : {
+            "type" : "array[reference[network]]",
+            "nullable" : true,
+            "includeInList" : false
+        },
+        "hostId" : {
+            "type" : "reference[host]",
+            "nullable" : true
+        },
+        "count" : {
+            "type" : "int",
+            "nullable" : true,
+            "includeInList" : false
+        },
+        "credentialIds" : {
+            "type" : "array[reference[credential]]",
+            "nullable" : true,
+            "includeInList" : false
+        },
+        "instanceTriggeredStop" : {
+            "type" : "enum",
+            "default" : "stop",
+            "options" : [
+                "stop",
+                "remove",
+                "restart"
+            ]
+        },
+        "ports": {
+            "type": "array[string]",
+            "create": true,
+            "nullable": true
+        },
+        "subnetIds" : {
+            "type" : "array[reference[subnet]]",
+            "nullable" : true,
+            "includeInList" : false
+        },
+        "vnetIds" : {
+            "type" : "array[reference[vnet]]",
+            "nullable" : true,
+            "includeInList" : false
+        },
+        "primaryIpAddress" : {
+            "type" : "string"
+        },
+        "primaryAssociatedIpAddress" : {
+            "type" : "string"
+        },
+        "startOnCreate" : {
+            "type" : "boolean",
+            "create" : true,
+            "default" : true
+        },
+        "volumeDriver" : {
+            "type" : "string",
+            "nullable": true,
+            "create" : true
+        },
+        "validHostIds" : {
+            "type" : "array[reference[host]",
+            "create" : true,
+            "update" : true,
+            "nullable" : true
+        },
+        "systemContainer" : {
+            "type": "enum",
+            "options": [ "NetworkAgent", "LoadBalancerAgent"]
+        },
+        "expose": {
+            "type": "array[string]",
+            "create": true,
+            "nullable": true
+        },
+        "requestedIpAddress" : {
+            "type" : "string",
+            "nullable" : true
+        },
+        "serviceIndex": {
+            "type": "string",
+            "nullable": true
+        }
+    },
+    "resourceActions" : {
+        "console" : {
+            "input" : "instanceConsoleInput",
+            "output" : "instanceConsole",
+            "attributes" : {
+                "capability" : "console",
+                "state" : "running"
+            }
+        },
+        "stop" : {
+            "input" : "instanceStop",
+            "output" : "instance"
+        }
+    }
+}

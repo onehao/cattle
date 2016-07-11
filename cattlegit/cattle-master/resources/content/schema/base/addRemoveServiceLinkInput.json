@@ -1,0 +1,10 @@
+{
+    "collectionMethods" : [],
+    "resourceFields" : {
+        "serviceLink" : {
+            "type": "serviceLink",
+            "required": true,
+            "nullable": false
+        }
+    }
+}

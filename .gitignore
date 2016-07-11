@@ -2,4 +2,5 @@
 /.lock
 /.log
 /.bak_0.log
-/.plugins
+./.metadata
+./.recommenders

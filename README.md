@@ -2,7 +2,7 @@
 refactor version of cattle
 
 DOCKER SWARM STRATEGIES
-http://onehao.pw:9004/2016/06/27/docker-swarm-strategies/
+http://onehao.pw:9004/2016/07/28/docker-swarm-strategies/
 
 Agents make an outbound websocket connection to cattle. This long-lived bi-directional websocket connection serves as an event bus over which cattle pushes events for container create, start, stop, and delete, along with a number of other events. The code that makes the websocket connection and handles the events is here: https://github.com/rancher/python-agent/blob/master/cattle/agent/event.py
 
